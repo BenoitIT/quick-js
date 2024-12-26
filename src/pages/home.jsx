@@ -71,6 +71,7 @@ export function Home() {
               <Typography variant="lead" color="white" className="opacity-80">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsam, perspiciatis modi delectus aliquid nemo natus, quibusdam eos repudiandae quam deserunt in dignissimos quam deserunt quam deserunt!
               </Typography>
+              <Button className="bg-yellow-900 mt-10 md:min-w-[300px] min-w-fit">Start frandraiser</Button>
             </div>
           </div>
         </div>
