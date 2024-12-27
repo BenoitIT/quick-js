@@ -14,7 +14,7 @@ import {
   MenuList,
   Collapse
 } from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon, SquaresPlusIcon,Bars4Icon, SunIcon, ChevronDownIcon,CakeIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, SquaresPlusIcon, Bars4Icon, SunIcon, ChevronDownIcon, CakeIcon } from "@heroicons/react/24/outline";
 
 export function Navbar({ routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);

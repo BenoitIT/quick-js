@@ -5,10 +5,6 @@ import {
   CardHeader,
   Typography,
   Button,
-  IconButton,
-  Input,
-  Textarea,
-  Checkbox,
   Progress,
   Menu,
   MenuHandler,
@@ -16,10 +12,10 @@ import {
   MenuItem,
   CardFooter
 } from "@material-tailwind/react";
-import { FingerPrintIcon, UsersIcon, GiftTopIcon, ChevronDownIcon, ArrowRightIcon, PlayCircleIcon, ArrowsPointingInIcon, GiftIcon } from "@heroicons/react/24/solid";
-import { PageTitle, Footer } from "@/widgets/layout";
-import { FeatureCard, TeamCard } from "@/widgets/cards";
-import { featuresData, teamData, contactData } from "@/data";
+import { GiftTopIcon, ChevronDownIcon, ArrowRightIcon, PlayCircleIcon, ArrowsPointingInIcon, GiftIcon } from "@heroicons/react/24/solid";
+import { Footer } from "@/widgets/layout";
+import { FeatureCard } from "@/widgets/cards";
+import { featuresData} from "@/data";
 import { Link } from "react-router-dom";
 
 export function Home() {
@@ -66,7 +62,7 @@ export function Home() {
                 color="white"
                 className="mb-6 font-black"
               >
-                Your story starts with us.
+                Your cause, funded faster
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsam, perspiciatis modi delectus aliquid nemo natus, quibusdam eos repudiandae quam deserunt in dignissimos quam deserunt quam deserunt!
@@ -106,7 +102,7 @@ export function Home() {
                 <br />
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolor temporibus illo harum non officiis facere commodi ducimus ex iure. Veniam illum vero repellendus voluptatum omnis quasi ipsum ipsam. Repudiandae.
               </Typography>
-              <Button variant="filled" className="bg-yellow-900">read more</Button>
+              <Link to="how-quick-fund-works"><Button variant="filled" className="bg-yellow-900">read more</Button></Link>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-6/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg w-full h-[300px]">
@@ -159,6 +155,7 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-2  w-full">
               {data.map(({ imageLink, details, progress, goal }, index) => (
+                <Link to={`${index+1}`}>
                 <div key={index}>
                   <img
                     className="h-40 w-full rounded-lg object-cover object-center md:h-60"
@@ -169,6 +166,7 @@ export function Home() {
                   <Progress value={progress} className="my-2" color="green" />
                   <Typography className="text-sm font-medium mb-2">{goal}</Typography>
                 </div>
+                </Link>
               ))}
             </div>
           </div>
