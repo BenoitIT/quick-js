@@ -52,7 +52,7 @@ const Campaign = () => {
                                     <Typography className="font-normal text-sm"><span>Organiser</span></Typography>
                                 </div>
                             </li>
-                            <li className="flex items-center gap-4">
+                            <li className="flex items-center gap-4 mt-2">
                                 <IconButton className="rounded-full border border-white/20 bg-white/20 p-2 bg-gray-200">
                                     <UserIcon color="black" className="w-4 h-4" />
                                 </IconButton>
