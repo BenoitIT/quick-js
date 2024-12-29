@@ -23,7 +23,7 @@ const StartCampaign = () => {
                 <Typography className="font-semibold text-sm text-white hover:cursor-pointer px-3 py-1 hover:bg-white hover:text-yellow-900 h-fit rounded" variant="h6" onClick={()=>navigate("/")}>
                     Home
                 </Typography>
-                <Typography className="font-semibold text-sm text-white hover:cursor-pointer px-3 py-1 hover:bg-white hover:text-yellow-900 h-fit rounded" variant="h6">
+                <Typography className="font-semibold text-sm text-white hover:cursor-pointer px-3 py-1 hover:bg-white hover:text-yellow-900 h-fit rounded" variant="h6" onClick={()=>navigate("/campaign-holder/home")}>
                     Dashboard
                 </Typography>
             </div>

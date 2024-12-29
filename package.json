@@ -19,10 +19,14 @@
     "@lexical/utils": "^0.22.0",
     "@material-tailwind/react": "2.1.4",
     "lexical": "^0.22.0",
+    "lucide-react": "^0.469.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.17.0",
+    "recharts": "^2.15.0",
+    "shadcn": "^2.1.8",
+    "ui": "^0.2.4",
     "use-react-countries": "^2.0.1"
   },
   "devDependencies": {
