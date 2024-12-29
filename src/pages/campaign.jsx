@@ -1,6 +1,7 @@
 import { Typography, Card, CardHeader, Button, CardBody, IconButton } from "@material-tailwind/react";
-import { CheckIcon, HeartIcon,UserIcon  } from "@heroicons/react/24/outline";
+import { CheckIcon, HeartIcon, UserIcon } from "@heroicons/react/24/outline";
 import CircularProgress from "@/widgets/progress/progressBar";
+import { Link } from "react-router-dom";
 const Campaign = () => {
     return (
         <div className="w-full bg-green-900/90 min-h-[100vh] pt-24 max-h-fit pb-4">
@@ -43,24 +44,42 @@ const Campaign = () => {
                             <Typography className="mb-4" variant="h4">
                                 Organiser
                             </Typography>
-                            <li className="flex items-center gap-4">
-                                <IconButton className="rounded-full border border-white/20 bg-white/20 p-2 bg-gray-200">
-                                    <UserIcon color="black" className="w-4 h-4" />
-                                </IconButton>
-                                <div className="flex flex-col">
-                                    <Typography className="font-normal text-sm">John chillwell doe</Typography>
-                                    <Typography className="font-normal text-sm"><span>Organiser</span></Typography>
+                            <div className="flex md:flex-row gap-4 flex-col">
+                                <li className="flex items-center gap-4">
+                                    <IconButton className="rounded-full border border-white/20 bg-white/20 p-2 bg-gray-200">
+                                        <UserIcon color="black" className="w-4 h-4" />
+                                    </IconButton>
+                                    <div className="flex flex-col">
+                                        <Typography className="font-normal text-sm">John chillwell doe</Typography>
+                                        <Typography className="font-normal text-sm"><span className="text-black font-medium">Organiser</span></Typography>
+                                    </div>
+                                </li>
+                                <li className="flex items-center gap-4 mt-2">
+                                    <IconButton className="rounded-full border border-white/20 bg-white/20 p-2 bg-gray-200">
+                                        <UserIcon color="black" className="w-4 h-4" />
+                                    </IconButton>
+                                    <div className="flex flex-col">
+                                        <Typography className="font-normal text-sm">John xxxx</Typography>
+                                        <Typography className="font-normal text-sm"><span className="text-black font-medium">Benefiary</span></Typography>
+                                    </div>
+                                </li>
+                            </div>
+                            <div className="flex flex-col mt-6">
+                                <Typography className="mb-4" variant="h5">
+                                    Comments
+                                </Typography>
+                                <div className="flex flex-col gap-4">
+                                    <div>
+                                        <Typography className="font-semibold text-sm">Jamess</Typography>
+                                        <Typography className="font-normal text-sm">some thing needs to done for help</Typography>
+                                    </div>
+                                    <div>
+                                        <Typography className="font-semibold text-sm">Peter</Typography>
+                                        <Typography className="font-normal text-sm">some thing needs to done for help</Typography>
+                                    </div>
+                                    <Link className="text-sm hover:text-yellow-900">More comments...</Link>
                                 </div>
-                            </li>
-                            <li className="flex items-center gap-4 mt-2">
-                                <IconButton className="rounded-full border border-white/20 bg-white/20 p-2 bg-gray-200">
-                                    <UserIcon color="black" className="w-4 h-4" />
-                                </IconButton>
-                                <div className="flex flex-col">
-                                    <Typography className="font-normal text-sm">John xxxx</Typography>
-                                    <Typography className="font-normal text-sm"><span>Benefiary</span></Typography>
-                                </div>
-                            </li>
+                            </div>
                         </div>
                         <div className="container px-4 flex justify-center">
                             <Card variant="gradient" className="w-full max-w-[23rem] p-8 shadow-lg drop-shadow-md h-fit">

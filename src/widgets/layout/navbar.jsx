@@ -137,7 +137,7 @@ export function Navbar({ routes, action }) {
             <MenuHandler>
               <Typography as="div" variant="small" className="font-medium -ml-10">
                 <ListItem
-                  className="flex  gap-2 py-2  pr-4 font-medium text-white"
+                  className="flex  gap-2 py-2  pr-4  text-white font-bold"
                   onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                 >
                   Resources

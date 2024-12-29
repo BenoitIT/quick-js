@@ -17,8 +17,10 @@ import { Footer } from "@/widgets/layout";
 import { FeatureCard } from "@/widgets/cards";
 import { featuresData} from "@/data";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+  const navigate=useNavigate();
   const data = [
     {
       imageLink:
@@ -65,9 +67,9 @@ export function Home() {
                 Your cause, funded faster
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsam, perspiciatis modi delectus aliquid nemo natus, quibusdam eos repudiandae quam deserunt in dignissimos quam deserunt quam deserunt!
+              Join the millions who have discovered a better way to donate and receive funds for their cause. Your trust powers our platform and we protect it with every transaction. we've built a fortress of trust with bank-level security and real-time verification of every campaign.
               </Typography>
-              <Button className="bg-yellow-900 mt-10 md:min-w-[300px] min-w-fit">Start a fandraiser</Button>
+              <Button className="bg-yellow-900 mt-10 md:min-w-[300px] min-w-fit" onClick={()=>navigate("/sign-up")}>Start a fandraiser</Button>
             </div>
           </div>
         </div>
@@ -102,7 +104,7 @@ export function Home() {
                 <br />
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolor temporibus illo harum non officiis facere commodi ducimus ex iure. Veniam illum vero repellendus voluptatum omnis quasi ipsum ipsam. Repudiandae.
               </Typography>
-              <Link to="how-quick-fund-works"><Button variant="filled" className="bg-yellow-900">read more</Button></Link>
+              <Button onClick={()=>navigate("how-quick-fund-works")} variant="filled" className="bg-yellow-900">read more</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-6/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg w-full h-[300px]">
@@ -143,7 +145,7 @@ export function Home() {
             <Button className="bg-white border border-gray-600 text-gray-900 outline-none flex justify-center hover:bg-yellow-900 hover:text-white hover:border-none"><ArrowRightIcon class="h-4 w-6" /></Button>
           </div>
           <div className="flex gap-2 md:flex-row flex-col">
-            <div className="h-full w-full">
+            <div className="h-full w-full hover:cursor-pointer" onClick={()=>navigate(`${1}`)}>
               <img
                 className="h-full w-full rounded-lg object-cover object-center"
                 src={data[0].imageLink}
@@ -155,8 +157,7 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-2  w-full">
               {data.map(({ imageLink, details, progress, goal }, index) => (
-                <Link to={`${index+1}`}>
-                <div key={index}>
+                <div key={index} onClick={()=>navigate(`${index+1}`)} className="hover:cursor-pointer">
                   <img
                     className="h-40 w-full rounded-lg object-cover object-center md:h-60"
                     src={imageLink}
@@ -166,7 +167,6 @@ export function Home() {
                   <Progress value={progress} className="my-2" color="green" />
                   <Typography className="text-sm font-medium mb-2">{goal}</Typography>
                 </div>
-                </Link>
               ))}
             </div>
           </div>

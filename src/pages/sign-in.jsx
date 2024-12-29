@@ -1,13 +1,13 @@
 import {
   Input,
-  Checkbox,
   Button,
   Typography,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 export function SignIn() {
+  const navigate=useNavigate();
   return (
     <section className="m-8 flex gap-4">
       <div className="w-full lg:w-3/5 flex justify-center items-center flex-col h-[90vh]">
@@ -41,7 +41,7 @@ export function SignIn() {
               }}
             />
           </div>
-          <Button className="mt-6 bg-green-900/90" fullWidth>
+          <Button className="mt-6 bg-green-900/90" fullWidth onClick={()=>navigate("/create-campaign")}>
             Sign In
           </Button>
           <div className="space-y-4 mt-8">
