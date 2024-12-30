@@ -1,5 +1,7 @@
 import { Home, SignIn, SignUp } from "@/pages";
 import HomePage from "./pages/campaignHolder/home";
+import UpcommingCampaigns from "./pages/campaignHolder/upcommingCampaign";
+import EndedCampaigns from "./pages/campaignHolder/EndedCampaign";
 import {
   UserCircleIcon,
   InformationCircleIcon,
@@ -56,13 +58,13 @@ export const compHolderRoutes = [
         icon: <ArrowDownOnSquareStackIcon {...icon} />,
         name: "Upcomings",
         path: "/upcoming-campaigns",
-        // element: <Purchase/>,
+        element: <UpcommingCampaigns/>,
       },
       {
         icon: <ArrowsPointingInIcon {...icon} />,
         name: "Ended campaign",
         path: "/ended-campaigns",
-        // element: <Products />,
+        element: <EndedCampaigns />,
       },
       {
         icon: <InformationCircleIcon {...icon} />,
