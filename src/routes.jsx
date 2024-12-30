@@ -2,6 +2,8 @@ import { Home, SignIn, SignUp } from "@/pages";
 import HomePage from "./pages/campaignHolder/home";
 import UpcommingCampaigns from "./pages/campaignHolder/upcommingCampaign";
 import EndedCampaigns from "./pages/campaignHolder/EndedCampaign";
+import Notifications from "./pages/campaignHolder/notification";
+import Profile from "./pages/campaignHolder/profile";
 import {
   UserCircleIcon,
   InformationCircleIcon,
@@ -70,13 +72,13 @@ export const compHolderRoutes = [
         icon: <InformationCircleIcon {...icon} />,
         name: "notifications",
         path: "/notifications",
-        // element: <Notifications />,
+        element: <Notifications />,
       },
       {
         icon: <Cog6ToothIcon {...icon} />,
         name: "Settings",
         path: "/settings",
-        // element: <Profile />,
+        element: <Profile />,
       },
     ],
   },
