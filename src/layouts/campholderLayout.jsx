@@ -5,6 +5,7 @@ import {
 } from "@/widgets/layout";
 import { compHolderRoutes } from "@/routes";
 import { useMaterialTailwindController } from "@/context";
+import Profile from "@/pages/campaignHolder/profile";
 
 
 

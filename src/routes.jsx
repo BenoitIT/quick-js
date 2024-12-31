@@ -78,6 +78,12 @@ export const compHolderRoutes = [
         icon: <Cog6ToothIcon {...icon} />,
         name: "Settings",
         path: "/settings",
+        // element: <Profile />,
+      },
+      {
+        icon: <UserCircleIcon {...icon} />,
+        name: "profile",
+        path: "/profile",
         element: <Profile />,
       },
     ],
@@ -98,12 +104,7 @@ export const compHolderRoutes = [
         path: "",
         // element: <SignUp />,
       },
-      {
-        icon: <UserCircleIcon {...icon} />,
-        name: "profile",
-        path: "/profile",
-        // element: <Profile />,
-      },
+     
       {
         icon: <LockClosedIcon {...icon} />,
         name: "Logout",
