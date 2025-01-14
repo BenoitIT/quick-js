@@ -1,5 +1,5 @@
 import { Typography, Card, CardHeader, Button, CardBody, IconButton } from "@material-tailwind/react";
-import { CheckIcon, HeartIcon, UserIcon } from "@heroicons/react/24/outline";
+import { HeartIcon, UserIcon } from "@heroicons/react/24/outline";
 import CircularProgress from "@/widgets/progress/progressBar";
 import { Link } from "react-router-dom";
 const Campaign = () => {

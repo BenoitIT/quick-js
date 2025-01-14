@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { EyeIcon,PlusIcon } from "@heroicons/react/24/solid";
+import { EyeIcon,PlusIcon,TrashIcon } from "@heroicons/react/24/solid";
 import {
     Card,
     CardHeader,
@@ -195,8 +195,13 @@ export default function UpcommingCampaigns() {
                                         </td>
                                         <td className={classes}>
                                             <Tooltip content="View campaign details">
-                                                <IconButton variant="text">
+                                                <IconButton variant="text" onClick={()=>navigate("/campaign-holder/upcoming-campaigns/1")}>
                                                     <EyeIcon className="h-4 w-4" />
+                                                </IconButton>
+                                            </Tooltip>
+                                            <Tooltip content="Delete campaign" className="text-red-700 bg-gray-300">
+                                                <IconButton variant="text">
+                                                    <TrashIcon className="h-4 w-4 text-red-500" />
                                                 </IconButton>
                                             </Tooltip>
                                         </td>

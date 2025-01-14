@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { EyeIcon,PlusIcon } from "@heroicons/react/24/solid";
+import { EyeIcon, TrashIcon } from "@heroicons/react/24/solid";
 import {
     Card,
     CardHeader,
@@ -15,7 +15,7 @@ import {
 } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 
-const TABLE_HEAD = ["Beneficiary", "Country", "Progess", "Goal", "Date Created"," "];
+const TABLE_HEAD = ["Beneficiary", "Country", "Progess", "Goal", "Date Created", " "];
 
 const TABLE_ROWS = [
     {
@@ -25,7 +25,7 @@ const TABLE_ROWS = [
         job: "Rwanda",
         org: "Organization",
         online: 100,
-        goal:"$20,000",
+        goal: "$20,000",
         date: "23/04/18",
     },
     {
@@ -35,7 +35,7 @@ const TABLE_ROWS = [
         job: "Rwanda",
         org: "Developer",
         online: 100,
-        goal:"$20,000",
+        goal: "$20,000",
         date: "23/04/18",
     },
     {
@@ -45,7 +45,7 @@ const TABLE_ROWS = [
         job: "Uganda",
         org: "Projects",
         online: 100,
-        goal:"$8,000",
+        goal: "$8,000",
         date: "19/09/17",
     },
     {
@@ -55,7 +55,7 @@ const TABLE_ROWS = [
         job: "DRC",
         org: "Developer",
         online: 100,
-        goal:"$10,000",
+        goal: "$10,000",
         date: "24/12/08",
     },
     {
@@ -65,12 +65,13 @@ const TABLE_ROWS = [
         job: "Rwanda",
         org: "Executive",
         online: 100,
-        goal:"$20,000",
+        goal: "$20,000",
         date: "04/10/21",
     },
 ];
 
 export default function EndedCampaigns() {
+    const navigate= useNavigate();
     return (
         <Card className="h-full w-full mt-4">
             <CardHeader floated={false} shadow={false} className="rounded-none">
@@ -105,7 +106,7 @@ export default function EndedCampaigns() {
                     </thead>
                     <tbody>
                         {TABLE_ROWS.map(
-                            ({ img, name, email, job,online,goal, date }, index) => {
+                            ({ img, name, email, job, online, goal, date }, index) => {
                                 const isLast = index === TABLE_ROWS.length - 1;
                                 const classes = isLast
                                     ? "p-4"
@@ -150,7 +151,7 @@ export default function EndedCampaigns() {
                                                 <Chip
                                                     variant="ghost"
                                                     size="sm"
-                                                    value={online+"%"}
+                                                    value={online + "%"}
                                                     color={online ? "green" : "blue-gray"}
                                                 />
                                             </div>
@@ -175,8 +176,13 @@ export default function EndedCampaigns() {
                                         </td>
                                         <td className={classes}>
                                             <Tooltip content="View campaign details">
-                                                <IconButton variant="text">
+                                                <IconButton variant="text" onClick={()=>navigate("/campaign-holder/upcoming-campaigns/1")}>
                                                     <EyeIcon className="h-4 w-4" />
+                                                </IconButton>
+                                            </Tooltip>
+                                            <Tooltip content="Delete campaign" className="text-red-700 bg-gray-300">
+                                                <IconButton variant="text">
+                                                    <TrashIcon className="h-4 w-4 text-red-500" />
                                                 </IconButton>
                                             </Tooltip>
                                         </td>

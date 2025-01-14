@@ -5,7 +5,7 @@ import {
 } from "@/widgets/layout";
 import { compHolderRoutes } from "@/routes";
 import { useMaterialTailwindController } from "@/context";
-import Profile from "@/pages/campaignHolder/profile";
+import CampaignInfo from "@/pages/campaignHolder/campaignView";
 
 
 
@@ -24,9 +24,9 @@ export function CompaignHolder() {
       <div className="p-4 xl:ml-80">
         <DashboardNavbar routes={compHolderRoutes} />
         <Routes>
+        <Route  path="*" element={<CampaignInfo/>} />
           {compHolderRoutes.map(
             ({ layout, pages }) =>
-              layout === "campaign-holder" &&
               pages.map(({ path, element }) => (
                 <Route exact path={path} element={element} />
               ))

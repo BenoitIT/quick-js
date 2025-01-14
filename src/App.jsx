@@ -5,6 +5,7 @@ import routes from "@/routes";
 import HowItWorks from "./pages/howIworks";
 import StartCampaign from "./pages/startCampaign";
 import { CompaignHolder } from "./layouts/campholderLayout";
+import Profile from "./pages/campaignHolder/profile";
 
 
 function App() {

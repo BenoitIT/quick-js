@@ -4,6 +4,7 @@ import UpcommingCampaigns from "./pages/campaignHolder/upcommingCampaign";
 import EndedCampaigns from "./pages/campaignHolder/EndedCampaign";
 import Notifications from "./pages/campaignHolder/notification";
 import Profile from "./pages/campaignHolder/profile";
+import Analytics from "./pages/campaignHolder/summary";
 import {
   UserCircleIcon,
   InformationCircleIcon,
@@ -76,15 +77,9 @@ export const compHolderRoutes = [
       },
       {
         icon: <Cog6ToothIcon {...icon} />,
-        name: "Settings",
-        path: "/settings",
-        // element: <Profile />,
-      },
-      {
-        icon: <UserCircleIcon {...icon} />,
-        name: "profile",
-        path: "/profile",
-        element: <Profile />,
+        name: "Analytics",
+        path: "/summary",
+        element: <Analytics />,
       },
     ],
   },
@@ -93,16 +88,10 @@ export const compHolderRoutes = [
     layout: "auth",
     pages: [
       {
-        // icon: <ServerStackIcon {...icon} />,
-        name: " ",
-        path: " ",
-        // element: <SignIn />,
-      },
-      {
-        // icon: <RectangleStackIcon {...icon} />,
-        name: "",
-        path: "",
-        // element: <SignUp />,
+        icon: <UserCircleIcon {...icon} />,
+        name: "profile",
+        path: "/profile",
+        element: <Profile />,
       },
      
       {

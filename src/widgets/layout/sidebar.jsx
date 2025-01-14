@@ -46,7 +46,7 @@ export function Sidenav({ routes, brandName }) {
             <div className="m-4">
                 {routes.map(({ layout, pages }, key) => (
                     <ul key={key} className="mb-4 flex flex-col gap-1">
-                        {pages.map(({ icon, name, path }) => (
+                        {pages.map(({ icon, name, path }) => name!="profile"?(
                             <li key={name}>
                                 <NavLink to={`/${layout}${path}`}>
                                     {({ isActive }) => (
@@ -73,6 +73,33 @@ export function Sidenav({ routes, brandName }) {
                                     )}
                                 </NavLink>
                             </li>
+                        ):(
+                            <li key={name}>
+                                <NavLink to={`/campaign-holder${path}`}>
+                                    {({ isActive }) => (
+                                        <Button
+                                            variant={isActive ? "" : "text"}
+                                            color={
+                                                isActive
+                                                    ? sidenavColor
+                                                    : sidenavType === "dark"
+                                                        ? "white"
+                                                        : "blue-gray"
+                                            }
+                                            className={`flex items-center gap-4 px-4 capitalize ${isActive ? "bg-yellow-900 text-white" : ""}`}
+                                            fullWidth
+                                        >
+                                            {icon}
+                                            <Typography
+                                                color="inherit"
+                                                className="font-medium capitalize"
+                                            >
+                                                {name}
+                                            </Typography>
+                                        </Button>
+                                    )}
+                                </NavLink>
+                            </li> 
                         ))}
                     </ul>
                 ))}
