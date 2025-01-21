@@ -26,7 +26,7 @@ export function CompaignHolder() {
         <Routes>
         <Route  path="*" element={<CampaignInfo/>} />
           {compHolderRoutes.map(
-            ({ layout, pages }) =>
+            ({ _, pages }) =>
               pages.map(({ path, element }) => (
                 <Route exact path={path} element={element} />
               ))

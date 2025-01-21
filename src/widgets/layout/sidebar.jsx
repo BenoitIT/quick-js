@@ -46,7 +46,7 @@ export function Sidenav({ routes, brandName }) {
             <div className="m-4">
                 {routes.map(({ layout, pages }, key) => (
                     <ul key={key} className="mb-4 flex flex-col gap-1">
-                        {pages.map(({ icon, name, path }) => name!="profile"?(
+                        {pages.map(({ icon, name, path }) => name != "profile" ? (
                             <li key={name}>
                                 <NavLink to={`/${layout}${path}`}>
                                     {({ isActive }) => (
@@ -73,9 +73,9 @@ export function Sidenav({ routes, brandName }) {
                                     )}
                                 </NavLink>
                             </li>
-                        ):(
+                        ) : (
                             <li key={name}>
-                                <NavLink to={`/campaign-holder${path}`}>
+                                <NavLink to={`/admin${path}`}>
                                     {({ isActive }) => (
                                         <Button
                                             variant={isActive ? "" : "text"}
@@ -99,7 +99,7 @@ export function Sidenav({ routes, brandName }) {
                                         </Button>
                                     )}
                                 </NavLink>
-                            </li> 
+                            </li>
                         ))}
                     </ul>
                 ))}

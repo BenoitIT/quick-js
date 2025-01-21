@@ -5,7 +5,7 @@ import routes from "@/routes";
 import HowItWorks from "./pages/howIworks";
 import StartCampaign from "./pages/startCampaign";
 import { CompaignHolder } from "./layouts/campholderLayout";
-import Profile from "./pages/campaignHolder/profile";
+import { Admin } from "./layouts/admin";
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      {!(pathname == '/sign-in' || pathname == '/sign-up' || pathname == '/home/how-quick-fund-works' || pathname == '/create-campaign'|| pathname.startsWith('/campaign-holder')) && (
+      {!(pathname == '/sign-in' || pathname == '/sign-up' || pathname == '/home/how-quick-fund-works' || pathname == '/create-campaign'|| pathname.startsWith('/campaign-holder')|| pathname.startsWith('/admin')) && (
         <div className="container absolute  left-2/4 z-10 mx-auto -translate-x-2/4 p-4 bg-transparent">
           <Navbar routes={routes} />
         </div>
@@ -28,6 +28,7 @@ function App() {
         <Route exact path="/home/:id" element={<Campaign />} />
         <Route exact path="/create-campaign" element={<StartCampaign />} />
         <Route exact path="/campaign-holder" element={<CompaignHolder />} />
+        <Route exact path="/admin/*" element={<Admin />} />
         <Route exact path="/campaign-holder/*" element={<CompaignHolder />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
