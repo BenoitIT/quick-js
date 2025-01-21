@@ -15,13 +15,13 @@ export function SignUp() {
   return (
     <section className="m-8 flex">
       <Link to="/" className="w-2/5">
-      <div className="w-full h-[90vh] hidden lg:block">
-        <div className="absolute  h-[90vh] w-2/5 bg-green-900/90 bg-cover bg-center rounded-3xl" />
-        <img
-          src="/img/backimage.svg"
-          className="h-[90vh] w-full object-cover rounded-l-3xl "
-        />
-      </div>
+        <div className="w-full h-[90vh] hidden lg:block">
+          <div className="absolute  h-[90vh] w-2/5 bg-green-900/90 bg-cover bg-center rounded-3xl" />
+          <img
+            src="/img/backimage.svg"
+            className="h-[90vh] w-full object-cover rounded-l-3xl "
+          />
+        </div>
       </Link>
       <div className="w-full lg:w-3/5 flex flex-col items-center justify-center z-10 bg-white">
         <div className="text-center">
@@ -89,6 +89,41 @@ export function SignUp() {
                 className: "before:content-none after:content-none",
               }}
             />
+            <div className="w-full">
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="mb-1 font-medium"
+              >
+                Contact Number
+              </Typography>
+              <Input
+                maxLength={16}
+                placeholder="e.g., +1 123-456-7890"
+                pattern="^\+\d{1,3}\s\d{1,4}-\d{1,4}-\d{4}$"
+                className="appearance-none !border-t-blue-gray-200 placeholder:text-blue-gray-300 placeholder:opacity-100 focus:!border-t-gray-900 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none min-w-full"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-4 w-4 text-blue-gray-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                }
+              />
+              <Typography className="mt-2 text-xs font-normal text-blue-gray-500">
+                Include your country code for international numbers.
+              </Typography>
+            </div>
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Password
             </Typography>
