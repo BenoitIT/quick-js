@@ -1,12 +1,10 @@
 import {
     Card,
     CardBody,
-    CardFooter,
     Typography,
-    Button,
 } from "@material-tailwind/react";
+import WithDrawCard from "@/widgets/cards/withdraw-card";
 const Analytics = () => {
-
     return (
         <div className="bg-white overflow-hidden shadow rounded-lg border mt-10">
             <div className="px-4 py-5 sm:px-6">
@@ -55,6 +53,7 @@ const Analytics = () => {
                                 <Typography>
                                     $20,000
                                 </Typography>
+                                <WithDrawCard />
                             </CardBody>
                         </Card>
                         <Card className="mt-6 w-96">
@@ -68,6 +67,7 @@ const Analytics = () => {
                                 <Typography>
                                     $10,000
                                 </Typography>
+                                <WithDrawCard />
                             </CardBody>
                         </Card>
                         <Card className="mt-6 w-96">
@@ -81,6 +81,7 @@ const Analytics = () => {
                                 <Typography>
                                     $10,000
                                 </Typography>
+                                <WithDrawCard />
                             </CardBody>
                         </Card>
                         <Card className="mt-6 w-96">
@@ -94,6 +95,7 @@ const Analytics = () => {
                                 <Typography>
                                     $10,000
                                 </Typography>
+                                <WithDrawCard />
                             </CardBody>
                         </Card>
                     </div>

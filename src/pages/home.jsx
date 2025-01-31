@@ -15,12 +15,12 @@ import {
 import { GiftTopIcon, ChevronDownIcon, ArrowRightIcon, PlayCircleIcon, ArrowsPointingInIcon, GiftIcon } from "@heroicons/react/24/solid";
 import { Footer } from "@/widgets/layout";
 import { FeatureCard } from "@/widgets/cards";
-import { featuresData} from "@/data";
+import { featuresData } from "@/data";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export function Home() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const data = [
     {
       imageLink:
@@ -67,9 +67,9 @@ export function Home() {
                 Your cause, funded faster
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-              Join the millions who have discovered a better way to donate and receive funds for their cause. Your trust powers our platform and we protect it with every transaction. we've built a fortress of trust with bank-level security and real-time verification of every campaign.
+                Join the millions who have discovered a better way to donate and receive funds for their cause. Your trust powers our platform and we protect it with every transaction. we've built a fortress of trust with bank-level security and real-time verification of every campaign.
               </Typography>
-              <Button className="bg-yellow-900 mt-10 md:min-w-[300px] min-w-fit" onClick={()=>navigate("/sign-up")}>Start a fandraiser</Button>
+              <Button className="bg-yellow-900 mt-10 md:min-w-[300px] min-w-fit" onClick={() => navigate("/sign-up")}>Start a fandraiser</Button>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export function Home() {
                 <br />
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolor temporibus illo harum non officiis facere commodi ducimus ex iure. Veniam illum vero repellendus voluptatum omnis quasi ipsum ipsam. Repudiandae.
               </Typography>
-              <Button onClick={()=>navigate("how-quick-fund-works")} variant="filled" className="bg-yellow-900">read more</Button>
+              <Button onClick={() => navigate("how-quick-fund-works")} variant="filled" className="bg-yellow-900">read more</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-6/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg w-full h-[300px]">
@@ -145,7 +145,7 @@ export function Home() {
             <Button className="bg-white border border-gray-600 text-gray-900 outline-none flex justify-center hover:bg-yellow-900 hover:text-white hover:border-none"><ArrowRightIcon class="h-4 w-6" /></Button>
           </div>
           <div className="flex gap-2 md:flex-row flex-col">
-            <div className="h-full w-full hover:cursor-pointer" onClick={()=>navigate(`${1}`)}>
+            <div className="h-full w-full hover:cursor-pointer" onClick={() => navigate(`/${1}`)}>
               <img
                 className="h-full w-full rounded-lg object-cover object-center"
                 src={data[0].imageLink}
@@ -157,7 +157,7 @@ export function Home() {
             </div>
             <div className="grid grid-cols-2 gap-2  w-full">
               {data.map(({ imageLink, details, progress, goal }, index) => (
-                <div key={index} onClick={()=>navigate(`${index+1}`)} className="hover:cursor-pointer">
+                <div key={index} onClick={() => navigate(`/${index + 1}`)} className="hover:cursor-pointer">
                   <img
                     className="h-40 w-full rounded-lg object-cover object-center md:h-60"
                     src={imageLink}
@@ -233,33 +233,33 @@ export function Home() {
                 />
               </CardHeader>
               <CardBody>
-              <Typography variant="h6" color="white" className="mb-4 capitalize px-2 py-1 rounded bg-green-900 w-fit text-sm">
-                Give back
-              </Typography>
+                <Typography variant="h6" color="white" className="mb-4 capitalize px-2 py-1 rounded bg-green-900 w-fit text-sm">
+                  Give back
+                </Typography>
                 <Typography variant="h5" color="blue-gray" className="">
-                  Title of topic 
+                  Title of topic
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-              <Link to="#" className="inline-block">
-                <Button variant="text" className="flex items-center gap-2 hover:text-white hover:bg-yellow-900">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    className="h-4 w-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </Button>
-              </Link>
+                <Link to="#" className="inline-block">
+                  <Button variant="text" className="flex items-center gap-2 hover:text-white hover:bg-yellow-900">
+                    Learn More
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      className="h-4 w-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      />
+                    </svg>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="mt-4 w-96">
@@ -270,33 +270,33 @@ export function Home() {
                 />
               </CardHeader>
               <CardBody>
-              <Typography variant="h6" color="white" className="mb-4 capitalize px-2 py-1 rounded bg-green-900 w-fit text-sm">
-                New
-              </Typography>
+                <Typography variant="h6" color="white" className="mb-4 capitalize px-2 py-1 rounded bg-green-900 w-fit text-sm">
+                  New
+                </Typography>
                 <Typography variant="h5" color="blue-gray" className="">
-                  Title of topic 
+                  Title of topic
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-              <Link to="#" className="inline-block">
-                <Button variant="text" className="flex items-center gap-2 hover:text-white hover:bg-yellow-900">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    className="h-4 w-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </Button>
-              </Link>
+                <Link to="#" className="inline-block">
+                  <Button variant="text" className="flex items-center gap-2 hover:text-white hover:bg-yellow-900">
+                    Learn More
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      className="h-4 w-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      />
+                    </svg>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
             <Card className="mt-4 w-96">
@@ -307,33 +307,33 @@ export function Home() {
                 />
               </CardHeader>
               <CardBody>
-              <Typography variant="h6" color="white" className="mb-4 capitalize px-2 py-1 rounded bg-green-900 w-fit text-sm">
-                urgent cause
-              </Typography>
+                <Typography variant="h6" color="white" className="mb-4 capitalize px-2 py-1 rounded bg-green-900 w-fit text-sm">
+                  urgent cause
+                </Typography>
                 <Typography variant="h5" color="blue-gray" className="">
-                  Title of topic 
+                  Title of topic
                 </Typography>
               </CardBody>
               <CardFooter className="pt-0">
-              <Link to="#" className="inline-block">
-                <Button variant="text" className="flex items-center gap-2 hover:text-white hover:bg-yellow-900">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    className="h-4 w-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </Button>
-              </Link>
+                <Link to="#" className="inline-block">
+                  <Button variant="text" className="flex items-center gap-2 hover:text-white hover:bg-yellow-900">
+                    Learn More
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      className="h-4 w-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      />
+                    </svg>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           </div>

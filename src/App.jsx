@@ -6,6 +6,8 @@ import HowItWorks from "./pages/howIworks";
 import StartCampaign from "./pages/startCampaign";
 import { CompaignHolder } from "./layouts/campholderLayout";
 import { Admin } from "./layouts/admin";
+import DonationInfo from "./widgets/cards/donation-info";
+import PaymentCard from "./widgets/cards/payment-card";
 
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
 
   return (
     <>
-      {!(pathname == '/sign-in' || pathname == '/sign-up' || pathname == '/home/how-quick-fund-works' || pathname == '/create-campaign'|| pathname.startsWith('/campaign-holder')|| pathname.startsWith('/admin')) && (
+      {!(pathname == '/sign-in' || pathname == '/sign-up' || pathname == '/home/how-quick-fund-works' || pathname == '/create-campaign' || pathname.startsWith('/campaign-holder') || pathname.startsWith('/admin')) && (
         <div className="container absolute  left-2/4 z-10 mx-auto -translate-x-2/4 p-4 bg-transparent">
           <Navbar routes={routes} />
         </div>
@@ -25,7 +27,10 @@ function App() {
             element && <Route key={key} exact path={path} element={element} />
         )}
         <Route path="/home/how-quick-fund-works" element={<HowItWorks />} />
-        <Route exact path="/home/:id" element={<Campaign />} />
+        <Route path="/:id" element={<Campaign />} >
+          <Route index element={<DonationInfo />} />
+          <Route path="donate" element={<PaymentCard />} />
+        </Route>
         <Route exact path="/create-campaign" element={<StartCampaign />} />
         <Route exact path="/campaign-holder" element={<CompaignHolder />} />
         <Route exact path="/admin/*" element={<Admin />} />
